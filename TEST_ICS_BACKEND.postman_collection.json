@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "560d587a-31ce-4239-81a3-c60f8972ec8e",
+		"name": "TEST_ICS_BACKEND",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "showProduct",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{showProductUrl}}/api/auth/showProduct"
+					},
+					"response": []
+				},
+				{
+					"name": "orderList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{orderListUrl}}/api/auth/orderList"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plain\":\"250ml\",\r\n    \"gender\":\"female\",\r\n    \"color\":\"red\",\r\n    \"pattern\":\"test1\",\r\n    \"figure\":\"test20\",\r\n    \"size\":\"XS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{prodUrl}}/api/auth/addProduct"
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1, \r\n    \"quantity\":8,\r\n    \"number\":\"test\",\r\n    \"village\":\"test1\",\r\n    \"lane\":\"lane\",\r\n    \"road\":\"road\",\r\n    \"sub_district\":\"test3\",\r\n    \"district\":\"district\",\r\n    \"province\":\"test4\",\r\n    \"postal_code\":30000\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{addOrderUrl}}/api/auth/order"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "update",
+			"item": [
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plain\":\"180ml\",\r\n    \"gender\":\"female\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{updateProduct}}/api/auth/addProduct/1"
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrder",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"orderStatus\":20\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{UpdateOrder}}/api/auth/order/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://{{deleteProduct}}/api/auth/addProduct/1"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrder",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikeyy}}",
+								"key": "apikeyy"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://{{deleteOrder}}/api/auth/order/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
